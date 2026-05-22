@@ -2,8 +2,8 @@ name: Ukentlig tilgjengelighetssjekk
 
 on:
   schedule:
-    - cron: "0 7 * * 1"   # Hver mandag kl. 07:00 UTC = 08/09 norsk tid
-  workflow_dispatch:        # Manuell kjøring fra GitHub UI
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
 
 jobs:
   check-availability:
@@ -19,11 +19,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-
-      - name: Installer Playwright og Chromium
-        run: |
-          pip install playwright
-          playwright install chromium --with-deps
 
       - name: Kjør tilgjengelighetssjekk
         run: python fetch_status.py
