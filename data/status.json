@@ -1,13 +1,13 @@
 {
-  "generated": "2026-05-22T22:35:57.148654+02:00",
-  "generated_display": "22.05.2026 kl. 22:35",
-  "source": "Felleskatalogen / DMP – automatisk ukentlig sjekk",
+  "generated": "2026-05-22T22:00:00+02:00",
+  "generated_display": "22.05.2026 kl. 22:00",
+  "source": "DMP / Felleskatalogen – oppdatert manuelt 22.05.2026",
   "dmp_overview_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell",
   "summary": {
     "total": 10,
-    "with_shortage": 0,
-    "ok": 2,
-    "unknown": 8
+    "with_shortage": 2,
+    "ok": 8,
+    "unknown": 0
   },
   "preparations": [
     {
@@ -17,39 +17,21 @@
       "type": "systemisk",
       "fk_url": "https://www.felleskatalogen.no/medisin/estradot-sandoz-558818",
       "packages": [
-        {
-          "label": "25 µg/24t",
-          "fest_id": "ID_B2A1C3D4-0001-0001-0001-000000000001"
-        },
-        {
-          "label": "37,5 µg/24t",
-          "fest_id": "ID_B2A1C3D4-0001-0001-0001-000000000002"
-        },
-        {
-          "label": "50 µg/24t",
-          "fest_id": "ID_B2A1C3D4-0001-0001-0001-000000000003"
-        },
-        {
-          "label": "75 µg/24t",
-          "fest_id": "ID_B2A1C3D4-0001-0001-0001-000000000004"
-        },
-        {
-          "label": "100 µg/24t",
-          "fest_id": "ID_B2A1C3D4-0001-0001-0001-000000000005"
-        }
+        {"label": "25 µg/24t"}, {"label": "37,5 µg/24t"}, {"label": "50 µg/24t"},
+        {"label": "75 µg/24t"}, {"label": "100 µg/24t"}
       ],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradot",
+      "has_shortage": true,
+      "dmp_status": "Pågående",
+      "dmp_status_date": "18.05.2026",
+      "shortage_period": null,
+      "shortage_reason": "Produksjonsproblemer",
       "apotek_links": {
         "Apotek 1": "https://www.apotek1.no/search?q=Estradot",
         "Vitusapotek": "https://www.vitusapotek.no/sok?term=Estradot",
         "Boots": "https://www.bootsapotek.no/search?q=Estradot",
         "Farmasiet": "https://www.farmasiet.no/search?query=Estradot"
-      },
-      "dmp_status": "",
-      "dmp_status_date": "21.05.2026",
-      "shortage_period": null,
-      "shortage_reason": null,
-      "has_shortage": false
+      }
     },
     {
       "id": "estradiol_hexal",
@@ -58,34 +40,21 @@
       "type": "systemisk",
       "fk_url": "https://www.felleskatalogen.no/medisin/estradiol-hexal-hexal-566040",
       "packages": [
-        {
-          "label": "25 µg/24t"
-        },
-        {
-          "label": "37,5 µg/24t"
-        },
-        {
-          "label": "50 µg/24t"
-        },
-        {
-          "label": "75 µg/24t"
-        },
-        {
-          "label": "100 µg/24t"
-        }
+        {"label": "25 µg/24t"}, {"label": "37,5 µg/24t"}, {"label": "50 µg/24t"},
+        {"label": "75 µg/24t"}, {"label": "100 µg/24t"}
       ],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradiol+Hexal",
+      "has_shortage": false,
+      "dmp_status": "Ingen meldt mangel",
+      "dmp_status_date": "22.05.2026",
+      "shortage_period": null,
+      "shortage_reason": null,
       "apotek_links": {
         "Apotek 1": "https://www.apotek1.no/search?q=Estradiol+Hexal",
         "Vitusapotek": "https://www.vitusapotek.no/sok?term=Estradiol+Hexal",
         "Boots": "https://www.bootsapotek.no/search?q=Estradiol+Hexal",
         "Farmasiet": "https://www.farmasiet.no/search?query=Estradiol+Hexal"
-      },
-      "dmp_status": "Ukjent (nettverksfeil)",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
-      "has_shortage": null
+      }
     },
     {
       "id": "estrogel",
@@ -93,23 +62,19 @@
       "form": "Gel",
       "type": "systemisk",
       "fk_url": "https://www.felleskatalogen.no/medisin/estrogel-besins-healthcare-norway-559089",
-      "packages": [
-        {
-          "label": "0,06% gel pumpe"
-        }
-      ],
+      "packages": [{"label": "0,06% gel pumpe"}],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estrogel",
+      "has_shortage": false,
+      "dmp_status": "Ingen meldt mangel",
+      "dmp_status_date": "22.05.2026",
+      "shortage_period": null,
+      "shortage_reason": null,
       "apotek_links": {
         "Apotek 1": "https://www.apotek1.no/search?q=Estrogel",
         "Vitusapotek": "https://www.vitusapotek.no/sok?term=Estrogel",
         "Boots": "https://www.bootsapotek.no/search?q=Estrogel",
         "Farmasiet": "https://www.farmasiet.no/search?query=Estrogel"
-      },
-      "dmp_status": "Ukjent (nettverksfeil)",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
-      "has_shortage": null
+      }
     },
     {
       "id": "lenzetto",
@@ -117,23 +82,19 @@
       "form": "Spray",
       "type": "systemisk",
       "fk_url": "https://www.felleskatalogen.no/medisin/lenzetto-gedeon-richter-647011",
-      "packages": [
-        {
-          "label": "1,53 mg/spray"
-        }
-      ],
+      "packages": [{"label": "1,53 mg/spray"}],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Lenzetto",
+      "has_shortage": true,
+      "dmp_status": "Pågående",
+      "dmp_status_date": "17.03.2026",
+      "shortage_period": null,
+      "shortage_reason": "Kapasitetsutfordringer",
       "apotek_links": {
         "Apotek 1": "https://www.apotek1.no/search?q=Lenzetto",
         "Vitusapotek": "https://www.vitusapotek.no/sok?term=Lenzetto",
         "Boots": "https://www.bootsapotek.no/search?q=Lenzetto",
         "Farmasiet": "https://www.farmasiet.no/search?query=Lenzetto"
-      },
-      "dmp_status": "",
-      "dmp_status_date": "21.05.2026",
-      "shortage_period": null,
-      "shortage_reason": null,
-      "has_shortage": false
+      }
     },
     {
       "id": "progynova",
@@ -141,26 +102,19 @@
       "form": "Tablett",
       "type": "systemisk",
       "fk_url": "https://www.felleskatalogen.no/medisin/progynova-bayer-559276",
-      "packages": [
-        {
-          "label": "1 mg"
-        },
-        {
-          "label": "2 mg"
-        }
-      ],
+      "packages": [{"label": "1 mg"}, {"label": "2 mg"}],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Progynova",
+      "has_shortage": false,
+      "dmp_status": "Ingen meldt mangel",
+      "dmp_status_date": "22.05.2026",
+      "shortage_period": null,
+      "shortage_reason": null,
       "apotek_links": {
         "Apotek 1": "https://www.apotek1.no/search?q=Progynova",
         "Vitusapotek": "https://www.vitusapotek.no/sok?term=Progynova",
         "Boots": "https://www.bootsapotek.no/search?q=Progynova",
         "Farmasiet": "https://www.farmasiet.no/search?query=Progynova"
-      },
-      "dmp_status": "Ukjent (nettverksfeil)",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
-      "has_shortage": null
+      }
     },
     {
       "id": "vagifem",
@@ -168,23 +122,19 @@
       "form": "Vaginaltablett",
       "type": "vaginal",
       "fk_url": "https://www.felleskatalogen.no/medisin/vagifem-novo-nordisk-559494",
-      "packages": [
-        {
-          "label": "10 µg"
-        }
-      ],
+      "packages": [{"label": "10 µg"}],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Vagifem",
+      "has_shortage": false,
+      "dmp_status": "Ingen meldt mangel",
+      "dmp_status_date": "22.05.2026",
+      "shortage_period": null,
+      "shortage_reason": null,
       "apotek_links": {
         "Apotek 1": "https://www.apotek1.no/search?q=Vagifem",
         "Vitusapotek": "https://www.vitusapotek.no/sok?term=Vagifem",
         "Boots": "https://www.bootsapotek.no/search?q=Vagifem",
         "Farmasiet": "https://www.farmasiet.no/search?query=Vagifem"
-      },
-      "dmp_status": "Ukjent (nettverksfeil)",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
-      "has_shortage": null
+      }
     },
     {
       "id": "vagidonna",
@@ -192,23 +142,19 @@
       "form": "Vaginaltablett",
       "type": "vaginal",
       "fk_url": "https://www.felleskatalogen.no/medisin/vagidonna-gedeon-richter-562743",
-      "packages": [
-        {
-          "label": "10 µg"
-        }
-      ],
+      "packages": [{"label": "10 µg"}],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Vagidonna",
+      "has_shortage": false,
+      "dmp_status": "Ingen meldt mangel",
+      "dmp_status_date": "22.05.2026",
+      "shortage_period": null,
+      "shortage_reason": null,
       "apotek_links": {
         "Apotek 1": "https://www.apotek1.no/search?q=Vagidonna",
         "Vitusapotek": "https://www.vitusapotek.no/sok?term=Vagidonna",
         "Boots": "https://www.bootsapotek.no/search?q=Vagidonna",
         "Farmasiet": "https://www.farmasiet.no/search?query=Vagidonna"
-      },
-      "dmp_status": "Ukjent (nettverksfeil)",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
-      "has_shortage": null
+      }
     },
     {
       "id": "ovesterin",
@@ -216,26 +162,19 @@
       "form": "Vagitorier/krem",
       "type": "vaginal",
       "fk_url": "https://www.felleskatalogen.no/medisin/ovesterin-aspen-558989",
-      "packages": [
-        {
-          "label": "0,5 mg vagitorier"
-        },
-        {
-          "label": "0,1 mg/g krem"
-        }
-      ],
+      "packages": [{"label": "0,5 mg vagitorier"}, {"label": "0,1 mg/g krem"}],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Ovesterin",
+      "has_shortage": false,
+      "dmp_status": "Ingen meldt mangel",
+      "dmp_status_date": "22.05.2026",
+      "shortage_period": null,
+      "shortage_reason": null,
       "apotek_links": {
         "Apotek 1": "https://www.apotek1.no/search?q=Ovesterin",
         "Vitusapotek": "https://www.vitusapotek.no/sok?term=Ovesterin",
         "Boots": "https://www.bootsapotek.no/search?q=Ovesterin",
         "Farmasiet": "https://www.farmasiet.no/search?query=Ovesterin"
-      },
-      "dmp_status": "Ukjent (nettverksfeil)",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
-      "has_shortage": null
+      }
     },
     {
       "id": "gelisse",
@@ -243,23 +182,19 @@
       "form": "Vaginalgel",
       "type": "vaginal",
       "fk_url": "https://www.felleskatalogen.no/medisin/gelisse-italfarmaco-562400",
-      "packages": [
-        {
-          "label": "50 µg/g gel"
-        }
-      ],
+      "packages": [{"label": "50 µg/g gel"}],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Gelisse",
+      "has_shortage": false,
+      "dmp_status": "Ingen meldt mangel",
+      "dmp_status_date": "22.05.2026",
+      "shortage_period": null,
+      "shortage_reason": null,
       "apotek_links": {
         "Apotek 1": "https://www.apotek1.no/search?q=Gelisse",
         "Vitusapotek": "https://www.vitusapotek.no/sok?term=Gelisse",
         "Boots": "https://www.bootsapotek.no/search?q=Gelisse",
         "Farmasiet": "https://www.farmasiet.no/search?query=Gelisse"
-      },
-      "dmp_status": "Ukjent (nettverksfeil)",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
-      "has_shortage": null
+      }
     },
     {
       "id": "gynoflor",
@@ -267,23 +202,19 @@
       "form": "Vaginaltablett",
       "type": "vaginal",
       "fk_url": "https://www.felleskatalogen.no/medisin/gynoflor-medinova-558914",
-      "packages": [
-        {
-          "label": "0,03 mg + Lactobacillus"
-        }
-      ],
+      "packages": [{"label": "0,03 mg + Lactobacillus"}],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Gynoflor",
+      "has_shortage": false,
+      "dmp_status": "Ingen meldt mangel",
+      "dmp_status_date": "22.05.2026",
+      "shortage_period": null,
+      "shortage_reason": null,
       "apotek_links": {
         "Apotek 1": "https://www.apotek1.no/search?q=Gynoflor",
         "Vitusapotek": "https://www.vitusapotek.no/sok?term=Gynoflor",
         "Boots": "https://www.bootsapotek.no/search?q=Gynoflor",
         "Farmasiet": "https://www.farmasiet.no/search?query=Gynoflor"
-      },
-      "dmp_status": "Ukjent (nettverksfeil)",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
-      "has_shortage": null
+      }
     }
   ]
 }
