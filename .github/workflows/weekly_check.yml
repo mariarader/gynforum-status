@@ -21,6 +21,8 @@ jobs:
           python-version: "3.12"
 
       - name: Kjør tilgjengelighetssjekk
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python fetch_status.py
 
       - name: Commit og push status.json
