@@ -1,0 +1,35 @@
+name: Ukentlig tilgjengelighetssjekk
+
+on:
+  schedule:
+    # Kjører hver mandag kl. 07:00 UTC (= 08:00/09:00 norsk tid)
+    - cron: "0 7 * * 1"
+  workflow_dispatch:  # Tillater manuell kjøring fra GitHub UI
+
+jobs:
+  check-availability:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # Trengs for å committe status.json tilbake til repo
+
+    steps:
+      - name: Sjekk ut repo
+        uses: actions/checkout@v4
+
+      - name: Sett opp Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Kjør tilgjengelighetssjekk
+        run: python fetch_status.py
+
+      - name: Commit og push status.json
+        run: |
+          git config user.name  "GynForum StatusBot"
+          git config user.email "bot@gynforum.com"
+          git add data/status.json
+          # Commit bare hvis filen faktisk har endret seg
+          git diff --cached --quiet || \
+            git commit -m "🔄 Automatisk tilgjengelighetssjekk $(date +'%d.%m.%Y')"
+          git push
