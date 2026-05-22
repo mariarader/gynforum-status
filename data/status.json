@@ -1,13 +1,13 @@
 {
-  "generated": "2026-05-22T23:03:51.317192+02:00",
-  "generated_display": "22.05.2026 kl. 23:03",
-  "source": "Felleskatalogen/DMP – automatisk ukentlig Playwright-sjekk",
+  "generated": "2026-05-22T23:09:44.236526+02:00",
+  "generated_display": "22.05.2026 kl. 23:09",
+  "source": "Felleskatalogen/DMP via Google-søk – ukentlig automatisk sjekk",
   "dmp_overview_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell",
   "summary": {
     "total": 10,
     "with_shortage": 0,
-    "ok": 10,
-    "unknown": 0
+    "ok": 0,
+    "unknown": 10
   },
   "preparations": [
     {
@@ -40,8 +40,8 @@
         "Boots": "https://www.bootsapotek.no/search?q=Estradot",
         "Farmasiet": "https://www.farmasiet.no/search?query=Estradot"
       },
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+      "has_shortage": null,
+      "dmp_status": "Ikke funnet",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -76,8 +76,8 @@
         "Boots": "https://www.bootsapotek.no/search?q=Estradiol+Hexal",
         "Farmasiet": "https://www.farmasiet.no/search?query=Estradiol+Hexal"
       },
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+      "has_shortage": null,
+      "dmp_status": "Ikke funnet",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -100,8 +100,8 @@
         "Boots": "https://www.bootsapotek.no/search?q=Estrogel",
         "Farmasiet": "https://www.farmasiet.no/search?query=Estrogel"
       },
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+      "has_shortage": null,
+      "dmp_status": "Ikke funnet",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -124,8 +124,8 @@
         "Boots": "https://www.bootsapotek.no/search?q=Lenzetto",
         "Farmasiet": "https://www.farmasiet.no/search?query=Lenzetto"
       },
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+      "has_shortage": null,
+      "dmp_status": "Ikke funnet",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -151,8 +151,8 @@
         "Boots": "https://www.bootsapotek.no/search?q=Progynova",
         "Farmasiet": "https://www.farmasiet.no/search?query=Progynova"
       },
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+      "has_shortage": null,
+      "dmp_status": "Ikke funnet",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -175,8 +175,8 @@
         "Boots": "https://www.bootsapotek.no/search?q=Vagifem",
         "Farmasiet": "https://www.farmasiet.no/search?query=Vagifem"
       },
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+      "has_shortage": null,
+      "dmp_status": "Ikke funnet",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -199,8 +199,8 @@
         "Boots": "https://www.bootsapotek.no/search?q=Vagidonna",
         "Farmasiet": "https://www.farmasiet.no/search?query=Vagidonna"
       },
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+      "has_shortage": null,
+      "dmp_status": "Ikke funnet",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -226,8 +226,8 @@
         "Boots": "https://www.bootsapotek.no/search?q=Ovesterin",
         "Farmasiet": "https://www.farmasiet.no/search?query=Ovesterin"
       },
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+      "has_shortage": null,
+      "dmp_status": "Ikke funnet",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -250,8 +250,8 @@
         "Boots": "https://www.bootsapotek.no/search?q=Gelisse",
         "Farmasiet": "https://www.farmasiet.no/search?query=Gelisse"
       },
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+      "has_shortage": null,
+      "dmp_status": "Ikke funnet",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -274,8 +274,8 @@
         "Boots": "https://www.bootsapotek.no/search?q=Gynoflor",
         "Farmasiet": "https://www.farmasiet.no/search?query=Gynoflor"
       },
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+      "has_shortage": null,
+      "dmp_status": "Ikke funnet",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
