@@ -1,17 +1,16 @@
 """
-GynForum – Tilgjengelighetssjekk v3
+GynForum – Tilgjengelighetssjekk v4
 =====================================
-Bruker Playwright (headless Chromium) til å hente JS-rendret innhold
-fra Felleskatalogen og parse DMP-mangelstatus.
-
-Installasjon i GitHub Actions:
-  pip install playwright
-  playwright install chromium --with-deps
+Henter DMP-mangelstatus ved å søke Google med site:felleskatalogen.no.
+Google-indeksen inneholder JS-rendret innhold inkl. "Status pr. DD.MM.ÅÅÅÅ: Pågående".
+Ingen headless browser nødvendig – fungerer med ren urllib.
 """
 
 import json
 import re
-import asyncio
+import urllib.request
+import urllib.parse
+import time
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
@@ -70,86 +69,116 @@ PREPARATIONS = [
      "apotek_links": {"Apotek 1":"https://www.apotek1.no/search?q=Gynoflor","Vitusapotek":"https://www.vitusapotek.no/sok?term=Gynoflor","Boots":"https://www.bootsapotek.no/search?q=Gynoflor","Farmasiet":"https://www.farmasiet.no/search?query=Gynoflor"}},
 ]
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept-Language": "no-NO,no;q=0.9,en;q=0.8",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+}
 
-def parse_status(text: str) -> dict:
-    """Parse DMP status from rendered page text."""
-    result = {"has_shortage": False, "dmp_status": "Ingen meldt mangel",
-              "dmp_status_date": None, "shortage_period": None, "shortage_reason": None}
 
-    m = re.search(r"Status\s+pr\.\s+(\d{2}\.\d{2}\.\d{4}):\s*(P[åa]g[åa]ende|Avsluttet)", text, re.IGNORECASE)
-    if m:
-        result["dmp_status_date"] = m.group(1).strip()
-        result["dmp_status"] = m.group(2).strip()
-        result["has_shortage"] = "p" in result["dmp_status"].lower()
+def search_status(prep_name: str, fk_slug: str) -> dict:
+    """
+    Søker Google etter preparatets side på Felleskatalogen.
+    Google-snippets inneholder JS-rendret DMP-status.
+    """
+    # Use site-specific Google search for the exact FK page
+    query = urllib.parse.quote_plus(
+        f'"{prep_name}" "Status pr." felleskatalogen.no'
+    )
+    url = f"https://www.google.com/search?q={query}&hl=no&num=5&gl=no"
 
-    m2 = re.search(r"[Mm]angelperiode:\s*(\d{2}\.\d{2}\.\d{4}\s+til\s+\d{2}\.\d{2}\.\d{4})", text)
+    try:
+        req = urllib.request.Request(url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=15) as resp:
+            html = resp.read().decode("utf-8", errors="replace")
+    except Exception as e:
+        print(f"    Nettverksfeil: {e}")
+        return {}
+
+    # Parse status from snippets
+    m = re.search(
+        r"Status\s+pr\.\s+(\d{2}\.\d{2}\.\d{4}):\s*(P[åa]g[åa]ende|Avsluttet)",
+        html, re.IGNORECASE
+    )
+    if not m:
+        return {}
+
+    date = m.group(1).strip()
+    status = m.group(2).strip()
+    has_shortage = "p" in status.lower()
+
+    result = {
+        "has_shortage": has_shortage,
+        "dmp_status": status,
+        "dmp_status_date": date,
+        "shortage_period": None,
+        "shortage_reason": None,
+    }
+
+    m2 = re.search(r"[Mm]angelperiode:\s*(\d{2}\.\d{2}\.\d{4}\s+til\s+\d{2}\.\d{2}\.\d{4})", html)
     if m2:
         result["shortage_period"] = m2.group(1).strip()
 
-    m3 = re.search(r"[ÅA]rsak:\s*([^\n]{5,80})", text)
+    m3 = re.search(r"[ÅA]rsak:\s*([^\n<]{5,80})", html)
     if m3:
         result["shortage_reason"] = m3.group(1).strip()
 
     return result
 
 
-async def fetch_prep(browser, prep: dict) -> dict:
-    page = await browser.new_page()
-    try:
-        await page.goto(prep["fk_url"], wait_until="networkidle", timeout=30000)
-        # Wait for status text to appear
-        try:
-            await page.wait_for_selector("text=Status pr.", timeout=8000)
-        except Exception:
-            pass
-        text = await page.inner_text("body")
-        status = parse_status(text)
-        indicator = "⚠ MANGEL" if status["has_shortage"] else "✓ OK"
-        print(f"  {prep['name']:20s} {indicator:12s} {status.get('dmp_status_date') or ''}")
-    except Exception as e:
-        print(f"  {prep['name']:20s} FEIL: {e}")
-        status = {"has_shortage": None, "dmp_status": "Feil ved henting",
-                  "dmp_status_date": None, "shortage_period": None, "shortage_reason": None}
-    finally:
-        await page.close()
+def check_prep(prep: dict) -> dict:
+    print(f"  {prep['name']:20s}", end=" ", flush=True)
+
+    live = search_status(prep["name"], prep["fk_url"])
+
+    if live:
+        indicator = "⚠ MANGEL" if live["has_shortage"] else "✓ OK"
+        print(f"{indicator:10s} (live, pr. {live.get('dmp_status_date', '?')})")
+        status = live
+    else:
+        # No live data found – mark as unknown
+        print("? (ikke funnet i søk)")
+        status = {
+            "has_shortage": None,
+            "dmp_status": "Ikke funnet",
+            "dmp_status_date": None,
+            "shortage_period": None,
+            "shortage_reason": None,
+        }
+
+    time.sleep(2)  # Be polite to Google
 
     return {
-        "id": prep["id"], "name": prep["name"], "form": prep["form"],
-        "type": prep["type"], "fk_url": prep["fk_url"],
-        "packages": prep["packages"],
+        "id": prep["id"], "name": prep["name"],
+        "form": prep["form"], "type": prep["type"],
+        "fk_url": prep["fk_url"], "packages": prep["packages"],
         "dmp_search_url": f"{DMP_BASE}?q={prep['dmp_search']}",
         "apotek_links": prep["apotek_links"],
         **status,
     }
 
 
-async def main_async():
-    from playwright.async_api import async_playwright
-
+def main():
     oslo = ZoneInfo("Europe/Oslo")
     now = datetime.now(oslo)
-    print(f"\nGynForum tilgjengelighetssjekk v3 (Playwright) – {now.strftime('%d.%m.%Y %H:%M')}\n")
+    print(f"\nGynForum tilgjengelighetssjekk v4 – {now.strftime('%d.%m.%Y %H:%M')}\n")
 
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        results = []
-        for prep in PREPARATIONS:
-            result = await fetch_prep(browser, prep)
-            results.append(result)
-        await browser.close()
+    results = [check_prep(p) for p in PREPARATIONS]
 
     with_shortage = [r for r in results if r["has_shortage"] is True]
+    ok = [r for r in results if r["has_shortage"] is False]
     unknown = [r for r in results if r["has_shortage"] is None]
 
     output = {
         "generated": now.isoformat(),
         "generated_display": now.strftime("%d.%m.%Y kl. %H:%M"),
-        "source": "Felleskatalogen/DMP – automatisk ukentlig Playwright-sjekk",
+        "source": "Felleskatalogen/DMP via Google-søk – ukentlig automatisk sjekk",
         "dmp_overview_url": DMP_BASE,
         "summary": {
             "total": len(results),
             "with_shortage": len(with_shortage),
-            "ok": len(results) - len(with_shortage) - len(unknown),
+            "ok": len(ok),
             "unknown": len(unknown),
         },
         "preparations": results,
@@ -158,11 +187,8 @@ async def main_async():
     with open("data/status.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"\n✓ data/status.json skrevet – {len(with_shortage)} med mangel, {len(unknown)} ukjent")
-
-
-def main():
-    asyncio.run(main_async())
+    print(f"\n✓ status.json oppdatert")
+    print(f"  {len(with_shortage)} med mangel · {len(ok)} OK · {len(unknown)} ikke funnet")
 
 
 if __name__ == "__main__":
