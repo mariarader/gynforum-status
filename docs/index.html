@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tilgjengelighet – Østrogenpreparater | GynForum</title>
+<meta name="description" content="Ukentlig oppdatert oversikt over tilgjengelighet og DMP-mangelmeldinger for østrogenpreparater i Norge.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --plum:       #5C3D5E;
+    --plum-light: #7A5580;
+    --plum-pale:  #F2E8F0;
+    --sage:       #8FAF9F;
+    --sage-light: #E8F2EE;
+    --sage-dark:  #2E7050;
+    --warm-white: #FDFAF8;
+    --ink:        #1C1A1E;
+    --muted:      #7A7480;
+    --border:     #E2D9E8;
+    --warn-bg:    #FEF7EE;
+    --warn-border:#F0C080;
+    --ok-bg:      #EEF7F2;
+    --ok-border:  #A8D4BC;
+    --bad-bg:     #FDF0F0;
+    --bad-border: #E0B0B0;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--warm-white);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 2.5rem;
+    background: white; border-bottom: 1px solid var(--border);
+  }
+  .nav-logo {
+    font-family: 'Fraunces', serif; font-style: italic;
+    font-size: 1.4rem; color: var(--plum); text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.78rem; font-weight: 500; letter-spacing: 0.06em;
+    text-transform: uppercase; color: var(--muted); text-decoration: none;
+  }
+  .nav-links a:hover { color: var(--plum); }
+
+  /* HERO */
+  .hero { max-width: 860px; margin: 0 auto; padding: 3rem 2rem 1.5rem; }
+  .hero-tag {
+    display: inline-block; font-size: 0.72rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--sage-dark); background: var(--sage-light);
+    padding: 0.28rem 0.85rem; border-radius: 2rem; margin-bottom: 1rem;
+  }
+  h1 {
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 600;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem); color: var(--plum);
+    line-height: 1.15; margin-bottom: 0.9rem;
+  }
+  .hero-lead { font-size: 0.96rem; font-weight: 300; color: var(--muted); max-width: 580px; }
+
+  /* META BAR */
+  .meta-bar {
+    max-width: 860px; margin: 1.25rem auto; padding: 0 2rem;
+    display: flex; flex-wrap: wrap; align-items: center;
+    justify-content: space-between; gap: 0.75rem;
+  }
+  .meta-text { font-size: 0.82rem; color: var(--muted); }
+  .meta-text strong { color: var(--ink); }
+  .meta-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  .m-badge {
+    font-size: 0.72rem; font-weight: 500; padding: 0.25rem 0.7rem;
+    border-radius: 2rem; border: 1px solid; white-space: nowrap;
+    display: inline-flex; align-items: center; gap: 0.3rem;
+  }
+  .m-ok   { background:var(--ok-bg);   color:var(--sage-dark);  border-color:var(--ok-border);   }
+  .m-warn { background:var(--warn-bg); color:#C07020;           border-color:var(--warn-border); }
+  .m-bad  { background:var(--bad-bg);  color:#902828;           border-color:var(--bad-border);  }
+  .dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+  .dot-ok   { background: var(--sage-dark); }
+  .dot-warn { background: #C07020; }
+  .dot-bad  { background: #902828; }
+
+  /* DISCLAIMER */
+  .disclaimer { max-width:860px; margin:0 auto 1.5rem; padding:0 2rem; }
+  .disc-box {
+    display:flex; gap:0.7rem; align-items:flex-start;
+    background:var(--warn-bg); border:1px solid var(--warn-border);
+    border-radius:10px; padding:0.85rem 1.1rem;
+    font-size:0.82rem; color:#7A5020; line-height:1.6;
+  }
+
+  /* FILTER */
+  .filter-bar {
+    max-width:860px; margin:0 auto 1.5rem; padding:0 2rem;
+    display:flex; gap:0.5rem; flex-wrap:wrap;
+  }
+  .fbtn {
+    font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:500;
+    padding:0.38rem 0.95rem; border-radius:2rem;
+    border:1.5px solid var(--border); background:white; color:var(--muted);
+    cursor:pointer; transition:all 0.15s;
+  }
+  .fbtn:hover, .fbtn.active { border-color:var(--plum); background:var(--plum); color:white; }
+
+  /* SECTION */
+  .section { max-width:860px; margin:0 auto; padding:0 2rem 2rem; }
+  .sec-title {
+    display:flex; align-items:center; gap:0.7rem; margin-bottom:1rem;
+    padding-top: 1.5rem; border-top: 1px solid var(--border);
+  }
+  .sec-title h2 {
+    font-family:'Fraunces',serif; font-style:italic; font-weight:400;
+    font-size:1.15rem; color:var(--plum); white-space:nowrap;
+  }
+  .sec-line { flex:1; height:1px; background:var(--border); }
+
+  /* TABLE */
+  .tbl-wrap { overflow-x:auto; border:1px solid var(--border); border-radius:12px; }
+  table { width:100%; border-collapse:collapse; font-size:0.84rem; }
+  thead th {
+    background:var(--plum); color:white; padding:0.6rem 1rem;
+    text-align:left; font-weight:500; font-size:0.72rem;
+    letter-spacing:0.04em; text-transform:uppercase; white-space:nowrap;
+  }
+  thead th:first-child { border-radius:11px 0 0 0; }
+  thead th:last-child  { border-radius:0 11px 0 0; }
+  tbody td { padding:0.65rem 1rem; border-bottom:1px solid var(--border); vertical-align:middle; }
+  tbody tr:last-child td { border-bottom:none; }
+  tbody tr:nth-child(even) td { background:var(--warm-white); }
+  tbody tr:hover td { background:var(--plum-pale); transition:background 0.1s; }
+
+  /* STATUS PILL */
+  .status-pill {
+    display:inline-flex; align-items:center; gap:0.35rem;
+    font-size:0.75rem; font-weight:500; padding:0.25rem 0.7rem;
+    border-radius:2rem; border:1px solid; white-space:nowrap;
+  }
+  .s-ok   { background:var(--ok-bg);   color:var(--sage-dark); border-color:var(--ok-border);   }
+  .s-bad  { background:var(--bad-bg);  color:#902828;          border-color:var(--bad-border);  }
+  .s-unk  { background:#F5F5F5;        color:#888;             border-color:#DDD;               }
+
+  /* APOTEK LINKS */
+  .apotek-links { display:flex; flex-wrap:wrap; gap:0.35rem; }
+  .alink {
+    font-size:0.73rem; font-weight:500; padding:0.22rem 0.65rem;
+    border-radius:2rem; border:1.5px solid var(--border);
+    color:var(--plum); text-decoration:none; background:white;
+    transition:all 0.15s; white-space:nowrap;
+  }
+  .alink:hover { background:var(--plum); color:white; border-color:var(--plum); }
+
+  /* DMP LINK */
+  .dmp-link {
+    font-size:0.73rem; color:var(--plum-light); text-decoration:none;
+    display:inline-flex; align-items:center; gap:0.25rem;
+  }
+  .dmp-link:hover { text-decoration:underline; }
+
+  /* SHORTAGE DETAIL */
+  .shortage-detail { font-size:0.78rem; color:#902828; margin-top:0.3rem; }
+
+  /* PACKAGES */
+  .pkg-list { font-size:0.78rem; color:var(--muted); }
+
+  /* SOURCE NOTE */
+  .source-note {
+    max-width:860px; margin:0 auto 3rem; padding:0 2rem;
+    font-size:0.8rem; color:var(--muted); line-height:1.7;
+    border-top:1px solid var(--border); padding-top:1.25rem;
+  }
+  .source-note a { color:var(--plum); }
+
+  /* LOADING */
+  .loading {
+    text-align:center; padding:3rem; color:var(--muted);
+    font-style:italic;
+  }
+
+  /* FOOTER */
+  footer {
+    background:var(--plum); color:rgba(255,255,255,0.65);
+    text-align:center; padding:2.5rem; font-size:0.8rem; line-height:1.9;
+  }
+  footer strong { color:white; }
+
+  @media (max-width:640px) {
+    nav { padding:0.9rem 1.1rem; }
+    .nav-links { display:none; }
+    .hero, .meta-bar, .disclaimer, .filter-bar, .section, .source-note {
+      padding-left:1.1rem; padding-right:1.1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">GynForum</a>
+  <ul class="nav-links">
+    <li><a href="/">Hjem</a></li>
+    <li><a href="/ostrogenpreparater">Preparater</a></li>
+    <li><a href="/skjema">Skjema</a></li>
+    <li><a href="/om-oss">Om oss</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag">Tilgjengelighet · Oppdateres ukentlig</div>
+  <h1>Tilgjengelighet<br>østrogenpreparater</h1>
+  <p class="hero-lead">Oversikt over DMP-mangelmeldinger for østrogenpreparater i Norge. Kilde: Direktoratet for medisinske produkter. Oppdateres automatisk hver mandag.</p>
+</section>
+
+<div class="meta-bar" id="meta-bar">
+  <div class="meta-text loading">Laster statusdata …</div>
+</div>
+
+<div class="disclaimer">
+  <div class="disc-box">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C07020" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    <div>
+      Statusen her er basert på innmeldte forsyningsproblemer til DMP og oppdateres <strong>ukentlig</strong>. Et preparat som ikke er meldt inn som mangelvare kan likevel mangle på <em>ditt</em> lokale apotek. Bruk lenkene under for å sjekke faktisk lagerstatus hos apotekkjedene.
+    </div>
+  </div>
+</div>
+
+<div class="filter-bar" id="filter-bar" style="display:none">
+  <button class="fbtn active" onclick="filterType('all',this)">Alle</button>
+  <button class="fbtn" onclick="filterType('systemisk',this)">Systemiske</button>
+  <button class="fbtn" onclick="filterType('vaginal',this)">Vaginale</button>
+  <button class="fbtn" onclick="filterType('shortage',this)">Kun mangel ⚠</button>
+</div>
+
+<div id="content">
+  <div class="loading">Laster …</div>
+</div>
+
+<div class="source-note" id="source-note" style="display:none">
+  <strong>Kilder og metode:</strong>
+  Status hentes ukentlig fra Felleskatalogen/DMP produktsider via et automatisk Python-skript kjørt med GitHub Actions.
+  Mangelstatus er basert på teksten «Status pr. [dato]: Pågående» slik den vises på preparatomtalene på
+  <a href="https://www.felleskatalogen.no" target="_blank">felleskatalogen.no</a>.
+  Fullstendig DMP-oversikt:
+  <a href="https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell" target="_blank">dmp.no/legemiddelmangel</a>.
+</div>
+
+<footer>
+  <strong>GynForum.com</strong><br>
+  Medisinsk ansvarlig: Maria Barøy Ræder, gynekolog og PhD<br>
+  <span style="opacity:0.55">Faglig informasjon – ikke individuell medisinsk rådgivning</span>
+</footer>
+
+<script>
+// Path to JSON – works both locally and on GitHub Pages
+const STATUS_URL = '../data/status.json';
+
+const FORM_ICONS = {
+  'Plaster': '🩹',
+  'Gel': '🧴',
+  'Spray': '💨',
+  'Tablett': '💊',
+  'Vaginaltablett': '🌸',
+  'Vagitorier/krem': '🌸',
+  'Vaginalgel': '🌸',
+};
+
+let allData = null;
+let activeType = 'all';
+
+async function loadStatus() {
+  try {
+    const res = await fetch(STATUS_URL);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    allData = await res.json();
+    render(allData);
+  } catch (e) {
+    document.getElementById('content').innerHTML =
+      `<div class="section"><p style="color:#902828;padding:1rem 0">
+        Kunne ikke laste statusdata: ${e.message}.<br>
+        <a href="https://www.dmp.no/forsyningssikkerhet/legemiddelmangel" target="_blank" style="color:var(--plum)">
+          Gå direkte til DMP →
+        </a>
+      </p></div>`;
+  }
+}
+
+function filterType(type, btn) {
+  document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  activeType = type;
+  render(allData);
+}
+
+function render(data) {
+  const preps = data.preparations.filter(p => {
+    if (activeType === 'all') return true;
+    if (activeType === 'shortage') return p.has_shortage === true;
+    return p.type === activeType;
+  });
+
+  // Update meta bar
+  const s = data.summary;
+  document.getElementById('meta-bar').innerHTML = `
+    <div class="meta-text">
+      Sist oppdatert: <strong>${data.generated_display}</strong>
+      &nbsp;·&nbsp; Kilde: DMP / Felleskatalogen
+    </div>
+    <div class="meta-badges">
+      <span class="m-badge m-ok"><span class="dot dot-ok"></span>${s.ok} uten mangel</span>
+      <span class="m-badge m-bad"><span class="dot dot-bad"></span>${s.with_shortage} med mangel</span>
+      ${s.unknown > 0 ? `<span class="m-badge m-warn"><span class="dot dot-warn"></span>${s.unknown} ukjent</span>` : ''}
+    </div>
+  `;
+
+  // Group by type
+  const systemisk = preps.filter(p => p.type === 'systemisk');
+  const vaginal   = preps.filter(p => p.type === 'vaginal');
+
+  let html = '';
+
+  if (systemisk.length) {
+    html += `
+      <div class="section" id="sec-systemisk">
+        <div class="sec-title">
+          <h2>Systemiske preparater</h2>
+          <div class="sec-line"></div>
+        </div>
+        <div class="tbl-wrap">${buildTable(systemisk)}</div>
+      </div>`;
+  }
+
+  if (vaginal.length) {
+    html += `
+      <div class="section" id="sec-vaginal">
+        <div class="sec-title">
+          <h2>Vaginale preparater</h2>
+          <div class="sec-line"></div>
+        </div>
+        <div class="tbl-wrap">${buildTable(vaginal)}</div>
+      </div>`;
+  }
+
+  if (!preps.length) {
+    html = `<div class="section"><p style="color:var(--muted);padding:1rem 0;font-style:italic">
+      Ingen preparater matcher dette filteret.
+    </p></div>`;
+  }
+
+  document.getElementById('content').innerHTML = html;
+  document.getElementById('filter-bar').style.display = 'flex';
+  document.getElementById('source-note').style.display = 'block';
+}
+
+function buildTable(preps) {
+  const rows = preps.map(p => {
+    const icon = FORM_ICONS[p.form] || '💊';
+    const pkgs = p.packages.map(pk => pk.label).join(' · ');
+
+    // Status pill
+    let pill;
+    if (p.has_shortage === true) {
+      pill = `<span class="status-pill s-bad"><span class="dot dot-bad"></span>Mangel meldt</span>`;
+    } else if (p.has_shortage === false) {
+      pill = `<span class="status-pill s-ok"><span class="dot dot-ok"></span>Ingen mangel</span>`;
+    } else {
+      pill = `<span class="status-pill s-unk">Ukjent</span>`;
+    }
+
+    // Shortage detail
+    let detail = '';
+    if (p.has_shortage) {
+      if (p.shortage_period) detail += `<div class="shortage-detail">Periode: ${p.shortage_period}</div>`;
+      if (p.shortage_reason) detail += `<div class="shortage-detail">Årsak: ${p.shortage_reason}</div>`;
+      if (p.dmp_status_date) detail += `<div class="shortage-detail" style="color:#888">DMP-status pr. ${p.dmp_status_date}</div>`;
+    }
+
+    // Apotek links
+    const apLinks = Object.entries(p.apotek_links)
+      .map(([name, url]) => `<a class="alink" href="${url}" target="_blank" rel="noopener">${name}</a>`)
+      .join('');
+
+    // DMP link
+    const dmpLink = `<a class="dmp-link" href="${p.dmp_search_url}" target="_blank" rel="noopener">
+      DMP-oversikt ↗
+    </a>`;
+
+    return `
+      <tr>
+        <td><strong>${icon} ${p.name}</strong><br>
+            <span class="pkg-list">${pkgs}</span></td>
+        <td>${p.form}</td>
+        <td>${pill}${detail}</td>
+        <td>
+          <div class="apotek-links">${apLinks}</div>
+        </td>
+        <td>${dmpLink}</td>
+      </tr>`;
+  }).join('');
+
+  return `
+    <table>
+      <thead>
+        <tr>
+          <th>Preparat / Styrker</th>
+          <th>Form</th>
+          <th>DMP-status</th>
+          <th>Sjekk lagerstatus</th>
+          <th>DMP</th>
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>`;
+}
+
+loadStatus();
+</script>
+</body>
+</html>
