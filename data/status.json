@@ -1,7 +1,7 @@
 {
-  "generated": "2026-05-22T23:09:44.236526+02:00",
-  "generated_display": "22.05.2026 kl. 23:09",
-  "source": "Felleskatalogen/DMP via Google-søk – ukentlig automatisk sjekk",
+  "generated": "2026-05-23T08:48:43.208415+02:00",
+  "generated_display": "23.05.2026 kl. 08:48",
+  "source": "Felleskatalogen/DMP via Claude API med web_search – ukentlig",
   "dmp_overview_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell",
   "summary": {
     "total": 10,
@@ -15,7 +15,6 @@
       "name": "Estradot",
       "form": "Plaster",
       "type": "systemisk",
-      "fk_url": "https://www.felleskatalogen.no/medisin/estradot-sandoz-558818",
       "packages": [
         {
           "label": "25 µg/24t"
@@ -41,7 +40,7 @@
         "Farmasiet": "https://www.farmasiet.no/search?query=Estradot"
       },
       "has_shortage": null,
-      "dmp_status": "Ikke funnet",
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -51,7 +50,6 @@
       "name": "Estradiol Hexal",
       "form": "Plaster",
       "type": "systemisk",
-      "fk_url": "https://www.felleskatalogen.no/medisin/estradiol-hexal-hexal-566040",
       "packages": [
         {
           "label": "25 µg/24t"
@@ -77,7 +75,7 @@
         "Farmasiet": "https://www.farmasiet.no/search?query=Estradiol+Hexal"
       },
       "has_shortage": null,
-      "dmp_status": "Ikke funnet",
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -87,7 +85,6 @@
       "name": "Estrogel",
       "form": "Gel",
       "type": "systemisk",
-      "fk_url": "https://www.felleskatalogen.no/medisin/estrogel-besins-healthcare-norway-559089",
       "packages": [
         {
           "label": "0,06% gel pumpe"
@@ -101,7 +98,7 @@
         "Farmasiet": "https://www.farmasiet.no/search?query=Estrogel"
       },
       "has_shortage": null,
-      "dmp_status": "Ikke funnet",
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -111,7 +108,6 @@
       "name": "Lenzetto",
       "form": "Spray",
       "type": "systemisk",
-      "fk_url": "https://www.felleskatalogen.no/medisin/lenzetto-gedeon-richter-647011",
       "packages": [
         {
           "label": "1,53 mg/spray"
@@ -125,7 +121,7 @@
         "Farmasiet": "https://www.farmasiet.no/search?query=Lenzetto"
       },
       "has_shortage": null,
-      "dmp_status": "Ikke funnet",
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -135,7 +131,6 @@
       "name": "Progynova",
       "form": "Tablett",
       "type": "systemisk",
-      "fk_url": "https://www.felleskatalogen.no/medisin/progynova-bayer-559276",
       "packages": [
         {
           "label": "1 mg"
@@ -152,7 +147,7 @@
         "Farmasiet": "https://www.farmasiet.no/search?query=Progynova"
       },
       "has_shortage": null,
-      "dmp_status": "Ikke funnet",
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -162,7 +157,6 @@
       "name": "Vagifem",
       "form": "Vaginaltablett",
       "type": "vaginal",
-      "fk_url": "https://www.felleskatalogen.no/medisin/vagifem-novo-nordisk-559494",
       "packages": [
         {
           "label": "10 µg"
@@ -176,7 +170,7 @@
         "Farmasiet": "https://www.farmasiet.no/search?query=Vagifem"
       },
       "has_shortage": null,
-      "dmp_status": "Ikke funnet",
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -186,7 +180,6 @@
       "name": "Vagidonna",
       "form": "Vaginaltablett",
       "type": "vaginal",
-      "fk_url": "https://www.felleskatalogen.no/medisin/vagidonna-gedeon-richter-562743",
       "packages": [
         {
           "label": "10 µg"
@@ -200,7 +193,7 @@
         "Farmasiet": "https://www.farmasiet.no/search?query=Vagidonna"
       },
       "has_shortage": null,
-      "dmp_status": "Ikke funnet",
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -210,7 +203,6 @@
       "name": "Ovesterin",
       "form": "Vagitorier/krem",
       "type": "vaginal",
-      "fk_url": "https://www.felleskatalogen.no/medisin/ovesterin-aspen-558989",
       "packages": [
         {
           "label": "0,5 mg vagitorier"
@@ -227,7 +219,7 @@
         "Farmasiet": "https://www.farmasiet.no/search?query=Ovesterin"
       },
       "has_shortage": null,
-      "dmp_status": "Ikke funnet",
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -237,7 +229,6 @@
       "name": "Gelisse",
       "form": "Vaginalgel",
       "type": "vaginal",
-      "fk_url": "https://www.felleskatalogen.no/medisin/gelisse-italfarmaco-562400",
       "packages": [
         {
           "label": "50 µg/g gel"
@@ -251,7 +242,7 @@
         "Farmasiet": "https://www.farmasiet.no/search?query=Gelisse"
       },
       "has_shortage": null,
-      "dmp_status": "Ikke funnet",
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
@@ -261,7 +252,6 @@
       "name": "Gynoflor",
       "form": "Vaginaltablett",
       "type": "vaginal",
-      "fk_url": "https://www.felleskatalogen.no/medisin/gynoflor-medinova-558914",
       "packages": [
         {
           "label": "0,03 mg + Lactobacillus"
@@ -275,7 +265,7 @@
         "Farmasiet": "https://www.farmasiet.no/search?query=Gynoflor"
       },
       "has_shortage": null,
-      "dmp_status": "Ikke funnet",
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null
