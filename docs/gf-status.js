@@ -73,6 +73,9 @@
     if (sys.length) h += '<h3 style="font-family:serif;font-style:italic;color:#5C3D5E;font-size:15px;margin:8px 0 10px;">Systemiske preparater</h3>' + buildTable(sys);
     if (vag.length) h += '<h3 style="font-family:serif;font-style:italic;color:#5C3D5E;font-size:15px;margin:20px 0 10px;">Vaginale preparater</h3>' + buildTable(vag);
 
+    if (data.apotek_note) {
+      h += '<p style="font-size:11px;color:#7A7480;font-style:italic;margin-top:10px;">💡 ' + data.apotek_note + '</p>';
+    }
     document.querySelectorAll('#gf-content').forEach(function (el) { el.innerHTML = h; });
   }
 
