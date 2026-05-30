@@ -1,5 +1,5 @@
 (function () {
-  var STATUS_URL = 'https://cdn.jsdelivr.net/gh/mariarader/gynforum-status@main/data/status.json';
+  var STATUS_URL = 'https://mariarader.github.io/gynforum-status/status.json';
 
   var ICONS = {
     Plaster:'🩹', Gel:'🧴', Spray:'💨', Tablett:'💊',
