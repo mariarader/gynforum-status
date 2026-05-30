@@ -25,11 +25,14 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python fetch_status.py
 
-      - name: Commit og push status.json
+      - name: Kopier status.json til docs/ for GitHub Pages
+        run: cp data/status.json docs/status.json
+
+      - name: Commit og push
         run: |
           git config user.name  "GynForum StatusBot"
           git config user.email "bot@gynforum.com"
-          git add data/status.json
+          git add data/status.json docs/status.json
           git diff --cached --quiet || \
             git commit -m "🔄 Automatisk sjekk $(date +'%d.%m.%Y')"
           git push
