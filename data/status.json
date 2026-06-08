@@ -1,281 +1,274 @@
 {
-  "generated": "2026-06-01T18:40:58.362414+02:00",
-  "generated_display": "01.06.2026 kl. 18:40",
-  "source": "DMP – automatisk hentet fra excelData (lokal Mac)",
+  "generated": "2026-06-08T14:01:15.014163+02:00",
+  "generated_display": "08.06.2026 kl. 14:01",
+  "source": "Felleskatalogen/DMP via Claude API med web_search – ukentlig",
   "dmp_overview_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell",
-  "apotek_note": "Lenkene åpner søkeresultatet for preparatet hos hvert apotek. Klikk videre på pakningen for å se lagerstatus per apotek.",
   "summary": {
-    "total": 14,
-    "with_shortage": 5,
-    "ok": 9,
-    "unknown": 0
+    "total": 10,
+    "with_shortage": 0,
+    "ok": 0,
+    "unknown": 10
   },
   "preparations": [
     {
-      "id": "estradot_25",
+      "id": "estradot",
       "name": "Estradot",
-      "dose": "25 µg/24t",
       "form": "Plaster",
       "type": "systemisk",
-      "has_shortage": true,
-      "dmp_status": "Pågående",
-      "dmp_status_date": "24.04.2026",
-      "shortage_period": null,
-      "shortage_reason": null,
+      "packages": [
+        {
+          "label": "25 µg/24t"
+        },
+        {
+          "label": "37,5 µg/24t"
+        },
+        {
+          "label": "50 µg/24t"
+        },
+        {
+          "label": "75 µg/24t"
+        },
+        {
+          "label": "100 µg/24t"
+        }
+      ],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradot",
       "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/estradot?searchTerm=estradot&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=estradot%20dep%20plast",
-        "Boots": "https://www.boots.no/search/result/?q=estradot",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=estradot&orderBy=0"
-      }
-    },
-    {
-      "id": "estradot_375",
-      "name": "Estradot",
-      "dose": "37,5 µg/24t",
-      "form": "Plaster",
-      "type": "systemisk",
-      "has_shortage": true,
-      "dmp_status": "Pågående",
-      "dmp_status_date": "30.04.2026",
-      "shortage_period": null,
-      "shortage_reason": null,
-      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradot",
-      "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/estradot?searchTerm=estradot&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=estradot%20dep%20plast",
-        "Boots": "https://www.boots.no/search/result/?q=estradot",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=estradot&orderBy=0"
-      }
-    },
-    {
-      "id": "estradot_50",
-      "name": "Estradot",
-      "dose": "50 µg/24t",
-      "form": "Plaster",
-      "type": "systemisk",
-      "has_shortage": true,
-      "dmp_status": "Pågående",
-      "dmp_status_date": "24.04.2026",
-      "shortage_period": null,
-      "shortage_reason": null,
-      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradot",
-      "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/estradot?searchTerm=estradot&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=estradot%20dep%20plast",
-        "Boots": "https://www.boots.no/search/result/?q=estradot",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=estradot&orderBy=0"
-      }
-    },
-    {
-      "id": "estradot_75",
-      "name": "Estradot",
-      "dose": "75 µg/24t",
-      "form": "Plaster",
-      "type": "systemisk",
-      "has_shortage": true,
-      "dmp_status": "Pågående",
-      "dmp_status_date": "10.04.2026",
-      "shortage_period": null,
-      "shortage_reason": null,
-      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradot",
-      "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/estradot?searchTerm=estradot&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=estradot%20dep%20plast",
-        "Boots": "https://www.boots.no/search/result/?q=estradot",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=estradot&orderBy=0"
-      }
-    },
-    {
-      "id": "estradot_100",
-      "name": "Estradot",
-      "dose": "100 µg/24t",
-      "form": "Plaster",
-      "type": "systemisk",
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+        "Apotek 1": "https://www.apotek1.no/search?q=Estradot",
+        "Vitusapotek": "https://www.vitusapotek.no/sok?term=Estradot",
+        "Boots": "https://www.bootsapotek.no/search?q=Estradot",
+        "Farmasiet": "https://www.farmasiet.no/search?query=Estradot"
+      },
+      "has_shortage": null,
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
-      "shortage_reason": null,
-      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradot",
-      "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/estradot?searchTerm=estradot&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=estradot%20dep%20plast",
-        "Boots": "https://www.boots.no/search/result/?q=estradot",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=estradot&orderBy=0"
-      }
+      "shortage_reason": null
     },
     {
-      "id": "estradiol_hexal_25",
+      "id": "estradiol_hexal",
       "name": "Estradiol Hexal",
-      "dose": "25 µg/24t",
       "form": "Plaster",
       "type": "systemisk",
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+      "packages": [
+        {
+          "label": "25 µg/24t"
+        },
+        {
+          "label": "37,5 µg/24t"
+        },
+        {
+          "label": "50 µg/24t"
+        },
+        {
+          "label": "75 µg/24t"
+        },
+        {
+          "label": "100 µg/24t"
+        }
+      ],
+      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradiol+Hexal",
+      "apotek_links": {
+        "Apotek 1": "https://www.apotek1.no/search?q=Estradiol+Hexal",
+        "Vitusapotek": "https://www.vitusapotek.no/sok?term=Estradiol+Hexal",
+        "Boots": "https://www.bootsapotek.no/search?q=Estradiol+Hexal",
+        "Farmasiet": "https://www.farmasiet.no/search?query=Estradiol+Hexal"
+      },
+      "has_shortage": null,
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
-      "shortage_reason": null,
-      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradiol%20Hexal",
-      "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/Estradiol%20Hex%20?searchTerm=Estradiol%20Hex%20&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=estradiol%20hex",
-        "Boots": "https://www.boots.no/search/result/?q=estradiol+hexal",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=estradiol+hexal&orderBy=0"
-      }
+      "shortage_reason": null
     },
     {
-      "id": "estradiol_hexal_375",
-      "name": "Estradiol Hexal",
-      "dose": "37,5 µg/24t",
-      "form": "Plaster",
-      "type": "systemisk",
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
-      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradiol%20Hexal",
-      "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/Estradiol%20Hex%20?searchTerm=Estradiol%20Hex%20&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=estradiol%20hex",
-        "Boots": "https://www.boots.no/search/result/?q=estradiol+hexal",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=estradiol+hexal&orderBy=0"
-      }
-    },
-    {
-      "id": "estradiol_hexal_50",
-      "name": "Estradiol Hexal",
-      "dose": "50 µg/24t",
-      "form": "Plaster",
-      "type": "systemisk",
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
-      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradiol%20Hexal",
-      "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/Estradiol%20Hex%20?searchTerm=Estradiol%20Hex%20&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=estradiol%20hex",
-        "Boots": "https://www.boots.no/search/result/?q=estradiol+hexal",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=estradiol+hexal&orderBy=0"
-      }
-    },
-    {
-      "id": "estradiol_hexal_75",
-      "name": "Estradiol Hexal",
-      "dose": "75 µg/24t",
-      "form": "Plaster",
-      "type": "systemisk",
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
-      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradiol%20Hexal",
-      "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/Estradiol%20Hex%20?searchTerm=Estradiol%20Hex%20&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=estradiol%20hex",
-        "Boots": "https://www.boots.no/search/result/?q=estradiol+hexal",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=estradiol+hexal&orderBy=0"
-      }
-    },
-    {
-      "id": "estradiol_hexal_100",
-      "name": "Estradiol Hexal",
-      "dose": "100 µg/24t",
-      "form": "Plaster",
-      "type": "systemisk",
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
-      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradiol%20Hexal",
-      "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/Estradiol%20Hex%20?searchTerm=Estradiol%20Hex%20&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=estradiol%20hex",
-        "Boots": "https://www.boots.no/search/result/?q=estradiol+hexal",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=estradiol+hexal&orderBy=0"
-      }
-    },
-    {
-      "id": "estrogel_075",
+      "id": "estrogel",
       "name": "Estrogel",
-      "dose": "0,75 mg/trykk",
       "form": "Gel",
       "type": "systemisk",
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
+      "packages": [
+        {
+          "label": "0,06% gel pumpe"
+        }
+      ],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estrogel",
       "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/produkter/estrogel-transdermalgel-0-75mg-95339p",
-        "Vitusapotek": "https://www.vitusapotek.no/reseptbelagte-legemidler/g-urogenitalsystem-og-kjonnshormoner/g03-kjonnshormoner-og-midler-med-effekt-pa-g/g03ca-naturlige-og-halvsyntetiske-ostrogeneru/estrogel-transdermalgel-075mg-1-x-80-g-095339",
-        "Boots": "https://www.boots.no/search/result/?q=estrogel",
-        "Farmasiet": "https://www.farmasiet.no/catalog/reseptvarer/g03-kjonnshormoner-og-midler-med-effekt-pa-genitalia2/estrogel-transdermalgel-075mgdos-1-x-80-g.-flaske-av-plast-med-dosepumpe,5024071"
-      }
+        "Apotek 1": "https://www.apotek1.no/search?q=Estrogel",
+        "Vitusapotek": "https://www.vitusapotek.no/sok?term=Estrogel",
+        "Boots": "https://www.bootsapotek.no/search?q=Estrogel",
+        "Farmasiet": "https://www.farmasiet.no/search?query=Estrogel"
+      },
+      "has_shortage": null,
+      "dmp_status": "Ukjent",
+      "dmp_status_date": null,
+      "shortage_period": null,
+      "shortage_reason": null
     },
     {
-      "id": "lenzetto_153",
+      "id": "lenzetto",
       "name": "Lenzetto",
-      "dose": "1,53 mg/spray",
       "form": "Spray",
       "type": "systemisk",
-      "has_shortage": true,
-      "dmp_status": "Pågående",
-      "dmp_status_date": "27.01.2026",
-      "shortage_period": null,
-      "shortage_reason": null,
+      "packages": [
+        {
+          "label": "1,53 mg/spray"
+        }
+      ],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Lenzetto",
       "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/lenzetto?searchTerm=lenzetto&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=lenzetto",
-        "Boots": "https://www.boots.no/search/result/?q=lenzetto",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=lenzetto&orderBy=0"
-      }
-    },
-    {
-      "id": "progynova_1",
-      "name": "Progynova",
-      "dose": "1 mg",
-      "form": "Tablett",
-      "type": "systemisk",
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
+        "Apotek 1": "https://www.apotek1.no/search?q=Lenzetto",
+        "Vitusapotek": "https://www.vitusapotek.no/sok?term=Lenzetto",
+        "Boots": "https://www.bootsapotek.no/search?q=Lenzetto",
+        "Farmasiet": "https://www.farmasiet.no/search?query=Lenzetto"
+      },
+      "has_shortage": null,
+      "dmp_status": "Ukjent",
       "dmp_status_date": null,
       "shortage_period": null,
-      "shortage_reason": null,
-      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Progynova",
-      "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/progynova?searchTerm=progynova&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=Progynova",
-        "Boots": "https://www.boots.no/search/result/?q=progynova",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=progynova"
-      }
+      "shortage_reason": null
     },
     {
-      "id": "progynova_2",
+      "id": "progynova",
       "name": "Progynova",
-      "dose": "2 mg",
       "form": "Tablett",
       "type": "systemisk",
-      "has_shortage": false,
-      "dmp_status": "Ingen meldt mangel",
-      "dmp_status_date": null,
-      "shortage_period": null,
-      "shortage_reason": null,
+      "packages": [
+        {
+          "label": "1 mg"
+        },
+        {
+          "label": "2 mg"
+        }
+      ],
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Progynova",
       "apotek_links": {
-        "Apotek 1": "https://www.apotek1.no/soek/progynova?searchTerm=progynova&sortMethod=0&pageSize=20&pageNumber=1&categoryId=&facets=&previousCategoryId=#load-more-potential",
-        "Vitusapotek": "https://www.vitusapotek.no/search?text=Progynova",
-        "Boots": "https://www.boots.no/search/result/?q=progynova",
-        "Farmasiet": "https://www.farmasiet.no/search?searchPhrase=progynova"
-      }
+        "Apotek 1": "https://www.apotek1.no/search?q=Progynova",
+        "Vitusapotek": "https://www.vitusapotek.no/sok?term=Progynova",
+        "Boots": "https://www.bootsapotek.no/search?q=Progynova",
+        "Farmasiet": "https://www.farmasiet.no/search?query=Progynova"
+      },
+      "has_shortage": null,
+      "dmp_status": "Ukjent",
+      "dmp_status_date": null,
+      "shortage_period": null,
+      "shortage_reason": null
+    },
+    {
+      "id": "vagifem",
+      "name": "Vagifem",
+      "form": "Vaginaltablett",
+      "type": "vaginal",
+      "packages": [
+        {
+          "label": "10 µg"
+        }
+      ],
+      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Vagifem",
+      "apotek_links": {
+        "Apotek 1": "https://www.apotek1.no/search?q=Vagifem",
+        "Vitusapotek": "https://www.vitusapotek.no/sok?term=Vagifem",
+        "Boots": "https://www.bootsapotek.no/search?q=Vagifem",
+        "Farmasiet": "https://www.farmasiet.no/search?query=Vagifem"
+      },
+      "has_shortage": null,
+      "dmp_status": "Ukjent",
+      "dmp_status_date": null,
+      "shortage_period": null,
+      "shortage_reason": null
+    },
+    {
+      "id": "vagidonna",
+      "name": "Vagidonna",
+      "form": "Vaginaltablett",
+      "type": "vaginal",
+      "packages": [
+        {
+          "label": "10 µg"
+        }
+      ],
+      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Vagidonna",
+      "apotek_links": {
+        "Apotek 1": "https://www.apotek1.no/search?q=Vagidonna",
+        "Vitusapotek": "https://www.vitusapotek.no/sok?term=Vagidonna",
+        "Boots": "https://www.bootsapotek.no/search?q=Vagidonna",
+        "Farmasiet": "https://www.farmasiet.no/search?query=Vagidonna"
+      },
+      "has_shortage": null,
+      "dmp_status": "Ukjent",
+      "dmp_status_date": null,
+      "shortage_period": null,
+      "shortage_reason": null
+    },
+    {
+      "id": "ovesterin",
+      "name": "Ovesterin",
+      "form": "Vagitorier/krem",
+      "type": "vaginal",
+      "packages": [
+        {
+          "label": "0,5 mg vagitorier"
+        },
+        {
+          "label": "0,1 mg/g krem"
+        }
+      ],
+      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Ovesterin",
+      "apotek_links": {
+        "Apotek 1": "https://www.apotek1.no/search?q=Ovesterin",
+        "Vitusapotek": "https://www.vitusapotek.no/sok?term=Ovesterin",
+        "Boots": "https://www.bootsapotek.no/search?q=Ovesterin",
+        "Farmasiet": "https://www.farmasiet.no/search?query=Ovesterin"
+      },
+      "has_shortage": null,
+      "dmp_status": "Ukjent",
+      "dmp_status_date": null,
+      "shortage_period": null,
+      "shortage_reason": null
+    },
+    {
+      "id": "gelisse",
+      "name": "Gelisse",
+      "form": "Vaginalgel",
+      "type": "vaginal",
+      "packages": [
+        {
+          "label": "50 µg/g gel"
+        }
+      ],
+      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Gelisse",
+      "apotek_links": {
+        "Apotek 1": "https://www.apotek1.no/search?q=Gelisse",
+        "Vitusapotek": "https://www.vitusapotek.no/sok?term=Gelisse",
+        "Boots": "https://www.bootsapotek.no/search?q=Gelisse",
+        "Farmasiet": "https://www.farmasiet.no/search?query=Gelisse"
+      },
+      "has_shortage": null,
+      "dmp_status": "Ukjent",
+      "dmp_status_date": null,
+      "shortage_period": null,
+      "shortage_reason": null
+    },
+    {
+      "id": "gynoflor",
+      "name": "Gynoflor",
+      "form": "Vaginaltablett",
+      "type": "vaginal",
+      "packages": [
+        {
+          "label": "0,03 mg + Lactobacillus"
+        }
+      ],
+      "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Gynoflor",
+      "apotek_links": {
+        "Apotek 1": "https://www.apotek1.no/search?q=Gynoflor",
+        "Vitusapotek": "https://www.vitusapotek.no/sok?term=Gynoflor",
+        "Boots": "https://www.bootsapotek.no/search?q=Gynoflor",
+        "Farmasiet": "https://www.farmasiet.no/search?query=Gynoflor"
+      },
+      "has_shortage": null,
+      "dmp_status": "Ukjent",
+      "dmp_status_date": null,
+      "shortage_period": null,
+      "shortage_reason": null
     }
   ]
 }
