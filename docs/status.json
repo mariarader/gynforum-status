@@ -1,13 +1,13 @@
 {
-  "generated": "2026-06-15T09:13:20.144302+02:00",
-  "generated_display": "15.06.2026 kl. 09:13",
+  "generated": "2026-06-29T09:02:48.037149+02:00",
+  "generated_display": "29.06.2026 kl. 09:02",
   "source": "DMP – automatisk hentet fra excelData (lokal Mac)",
   "dmp_overview_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell",
   "apotek_note": "Lenkene åpner søkeresultatet for preparatet hos hvert apotek. Klikk videre på pakningen for å se lagerstatus per apotek.",
   "summary": {
     "total": 14,
-    "with_shortage": 7,
-    "ok": 7,
+    "with_shortage": 6,
+    "ok": 8,
     "unknown": 0
   },
   "preparations": [
@@ -264,9 +264,9 @@
       "dose": "2 mg",
       "form": "Tablett",
       "type": "systemisk",
-      "has_shortage": true,
-      "dmp_status": "Pågående",
-      "dmp_status_date": "09.06.2026",
+      "has_shortage": false,
+      "dmp_status": "Ingen meldt mangel",
+      "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null,
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Progynova",
