@@ -1,13 +1,13 @@
 {
-  "generated": "2026-07-27T09:13:09.175086+02:00",
-  "generated_display": "27.07.2026 kl. 09:13",
+  "generated": "2026-08-03T09:08:59.099339+02:00",
+  "generated_display": "03.08.2026 kl. 09:08",
   "source": "DMP – automatisk hentet fra excelData (lokal Mac)",
   "dmp_overview_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell",
   "apotek_note": "Lenkene åpner søkeresultatet for preparatet hos hvert apotek. Klikk videre på pakningen for å se lagerstatus per apotek.",
   "summary": {
     "total": 14,
-    "with_shortage": 5,
-    "ok": 9,
+    "with_shortage": 4,
+    "ok": 10,
     "unknown": 0
   },
   "preparations": [
@@ -17,9 +17,9 @@
       "dose": "25 µg/24t",
       "form": "Plaster",
       "type": "systemisk",
-      "has_shortage": true,
-      "dmp_status": "Pågående",
-      "dmp_status_date": "24.04.2026",
+      "has_shortage": false,
+      "dmp_status": "Ingen meldt mangel",
+      "dmp_status_date": null,
       "shortage_period": null,
       "shortage_reason": null,
       "dmp_search_url": "https://www.dmp.no/forsyningssikkerhet/legemiddelmangel/oversikt-over-legemiddelmangel---for-pasienter-og-helsepersonell?q=Estradot",
